@@ -1,14 +1,18 @@
 {
-  "include": ["./src/*"],
   "compilerOptions": {
-    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "moduleResolution": "node",
     "esModuleInterop": true,
-    "lib": ["dom", "es2015"],
-    "jsx": "react",
-    "outDir": "./dist/",
+    "noUnusedLocals": true,
     "noImplicitAny": true,
-    "module": "es6",
-    "target": "es5",
-    "allowJs": true
-  }
+    "target": "es2015",
+    "module": "es2015",
+    "strict": true,
+    "jsx": "react"
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
 }

@@ -2,7 +2,7 @@ const path = require("path");
 
 module.exports = {
   mode: "development",
-  entry: "./src/index.js",
+  entry: "./src/index.tsx",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
@@ -11,14 +11,16 @@ module.exports = {
   devServer: {
     contentBase: "./dist",
   },
+  resolve: {
+    extensions: [".ts", ".tsx", ".js", ".json"],
+  },
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        // Include ts, tsx, js, and jsx files.
+        test: /\.(ts|js)x?$/,
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-        },
+        loader: "babel-loader",
       },
     ],
   },

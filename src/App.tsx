@@ -1,10 +1,5 @@
-import * as React from "react";
-// import "./styles.css";
+import React from "react";
 
-export default function App() {
-  return (
-    <div className="App">
-      <h1>Hello World!</h1>
-    </div>
-  );
-}
+const App = () => <div>hello typescript!</div>;
+
+export default App;
