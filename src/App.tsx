@@ -1,5 +1,6 @@
 import React from 'react';
+import Text from './text';
 
-const App = () => <div>hello typescript!</div>;
+const App = () => <Text t="hello world" />;
 
 export default App;
