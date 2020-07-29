@@ -12,6 +12,7 @@ module.exports = {
             version: 'detect', // Tells eslint-plugin-react to automatically detect the version of React to use
         },
     },
+    plugins: ['@typescript-eslint'],
     extends: [
         'plugin:react/recommended', // Uses the recommended rules from @eslint-plugin-react
         'plugin:@typescript-eslint/recommended', // Uses the recommended rules from the @typescript-eslint/eslint-plugin
@@ -20,6 +21,7 @@ module.exports = {
     ],
     rules: {
         '@typescript-eslint/no-explicit-any': 'error',
+        '@typescript-eslint/explicit-function-return-type': ['error'],
         // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
         // e.g. "@typescript-eslint/explicit-function-return-type": "off",
     },
